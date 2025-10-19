@@ -77,12 +77,12 @@ li a {
     padding: 0rem 1.5rem;
     width: 60%;
     display: block;
+    min-width: 60%;
 }
 .image-container img {
     width: 100%;
     height: auto;
-    display: inline-block;
-    
+    display: inline-block;    
 }
 .learn-text-container {
     color: hsl(0,0%,29%);
@@ -95,12 +95,12 @@ li a {
     margin-right: 5rem;
     margin-bottom: 5rem;
 }
-.text-container h2 {
+.learn-text-container h2 {
     font-size: 4rem;
     font-weight: bold;
     margin: 1.5rem 0;
 }
-.text-container p {
+.learn-text-container p {
     font-size: 1.5rem;
     font-weight: bold;
     margin: 1.5rem 0;
@@ -118,22 +118,123 @@ li a {
 /* Practice section */
 #practice {
     display: flex;
-    padding-top: 2rem;
+    
 }
 .left {
     width: 60%;
     padding: 0rem 1.5rem;
+    min-width: 60%;
+}
+#practice .left {
+    padding-top: 2rem;
 }
 .left .image-container {
     width: 100%;
     padding: 0;
 }
+.left h2 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+    color: hsl(0,0%,29%);
+}
+.left p {
+    margin-bottom: 2rem;
+}
+#quote {
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    font-style: italic;
+    color: hsl(0,0%,30%)
+}
 .right {
     width: 40%;
-    height: 100%;
+    height: auto;
     margin-left: 2rem;
+    border-left: 3px solid hsl(0,0%,89%);
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
 }
+.information {
+    border: 2px solid hsl(0,0%,89%);
+    min-width: 100%;
+    height: auto;
+    display: flex;
+    border-left: none;
+}
+ #second-information {
+    background-color: hsl(0,0%,85%);
+ }
+.right-text-container {
+    width: 65%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.right-text-container h4, .right-text-container p, .right-text-container a {
+    margin: 0.5rem 0;
+    color: hsl(0,0%,29%);
+}
+.right-text-container h4 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+.right-text-container p {
+    font-size: 1.5rem;
+}
+.right-text-container a {
+    color: hsl(212, 76%, 53%);
+    font-size: 1.5rem;
+}
+.right-image-container {
+    width: 35%;
+    height: auto;
+    padding: 1rem;
 
+}
+.right-image-container img {
+    width: 100%;
+    height: auto;
+    display: inline-block;    
+}
+/* Start Section */
+#start {
+    text-align: center;
+}
+#start h2 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    padding: 2rem 0;
+    color: hsl(0,0%,29%);
+}
+.course-list {
+    display: flex;
+    justify-content: center;
+    align-items: space-around;
+    padding: 2rem;
+    flex-wrap: wrap;
+}
+.course {
+    background-color: white;
+    margin: 2rem;
+    text-align: left;
+}
+.course-image-container {
+    width: 100%;
+    height: auto;
+}
+.course h4 {
+    margin: 2rem 2rem;
+}
+.course p {
+    margin: 1rem 2rem;
+}
+/* The current problem is that the margins on the right text on the learn section, are pushing the image and making it shrink.  A possible solution is to add another div as a wrapper around the text, so that it doesnt push the image div.  However that adds potentially unnecessary complication and makes me need to redo the positioning of the text.  Another solution is to add min-width 60% to the image containers so that they cant be pushed by the text, but that might make the image take up too much space when I shrink the browser down.  Perhaps that is fine, as I will be adding a mobile version of the site as well, but something to think about. */
 /* Video container overflow hidden is a temporary measure */
 .video-container {
     overflow: hidden;
