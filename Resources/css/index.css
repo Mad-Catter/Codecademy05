@@ -1,3 +1,4 @@
+/* MAKE A LOGO FAMICON OR WHATEVER IT IS */
 /*Starting Rules and Background Colors*/
 * {
     margin: 0;
@@ -5,15 +6,16 @@
     box-sizing: border-box;
     font-family: "Montserrat", sans-serif;
 }
-#practice, #thesis {
+#practice, #thesis, footer{
     background-color: hsl(180,1%,96%);
 }
 #learn, #start {
-    background-color: hsl(0,0%,85%);
+    background-color: hsl(0,0%,90%);
 }
 a {
     text-decoration: none;
 }
+
 /* Header Section */
 header {
     position: fixed;
@@ -167,7 +169,7 @@ li a {
     border-left: none;
 }
  #second-information {
-    background-color: hsl(0,0%,85%);
+    background-color: hsl(0,0%,90%);
  }
 .right-text-container {
     width: 65%;
@@ -209,33 +211,275 @@ li a {
 #start h2 {
     font-size: 3.5rem;
     font-weight: bold;
-    padding: 2rem 0;
+    padding: 4rem 0 2rem 0;
     color: hsl(0,0%,29%);
 }
 .course-list {
     display: flex;
     justify-content: center;
-    align-items: space-around;
     padding: 2rem;
+    padding-top: 0;
     flex-wrap: wrap;
+    align-content: space-around;
 }
 .course {
     background-color: white;
     margin: 2rem;
     text-align: left;
+    max-width: 33.25rem;
 }
 .course-image-container {
     width: 100%;
     height: auto;
 }
 .course h4 {
+    font-size: 2rem;
+    color: hsl(0,0%,29%);
+    font-weight: bold;
     margin: 2rem 2rem;
 }
 .course p {
+    color: hsl(0,0%,30%);
+    font-size: 1.5rem;
     margin: 1rem 2rem;
 }
-/* The current problem is that the margins on the right text on the learn section, are pushing the image and making it shrink.  A possible solution is to add another div as a wrapper around the text, so that it doesnt push the image div.  However that adds potentially unnecessary complication and makes me need to redo the positioning of the text.  Another solution is to add min-width 60% to the image containers so that they cant be pushed by the text, but that might make the image take up too much space when I shrink the browser down.  Perhaps that is fine, as I will be adding a mobile version of the site as well, but something to think about. */
-/* Video container overflow hidden is a temporary measure */
+.course .desc {
+    margin-bottom: 1.5rem;
+}
+/* Thesis Section */
+/* #thesis {
+    text-align: center;
+} */
+#thesis h2 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    padding: 4rem 0 2rem 0;
+    color: hsl(0,0%,29%);
+    text-align: center;
+}
+.thesis-information-container {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    padding-right: 0;
+    padding-bottom: 0;
+    flex-wrap: wrap;
+    align-content: space-around;
+}
+.second-left {
+    width: 60%;
+    min-width: 60%;
+}
+.second-right {
+    width: 40%;
+    padding-left: 1.5rem;
+    border-left: 3px solid hsl(0,0%,89%);
+}
 .video-container {
+    width: 100%;
+    height: auto;
+}
+video {
+    width: 100%;
+    height: auto;
     overflow: hidden;
+}
+.second-left h4 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: hsl(0,0%,29%);
+}
+.second-left p {
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    font-style: italic;
+    color: hsl(0,0%,30%)
+}
+.thesis-courses {
+    border: 2px solid hsl(0,0%,89%);
+}
+.first-thesis {
+    background-color: hsl(0,0%,90%)
+}
+.thesis-information {
+    display: flex;
+}
+.thesis-image-container {
+    width: 35%;
+    height: auto;
+    padding: 1rem;
+}
+.thesis-image-container img {
+    width: 100%;
+    height: auto;
+    display: inline-block;    
+}
+.thesis-text-container {
+    width: 65%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.thesis-text-container h4, .thesis-text-container p, .thesis-text-container a {
+    margin: 0.5rem 0;
+    color: hsl(0,0%,29%);
+}
+.thesis-text-container h4 {
+    font-size: 1.75rem;
+    font-weight: bold;
+}
+.thesis-text-container p {
+    font-size: 1.5rem;
+}
+/* Footer Section */
+footer {
+    border-top: 3px solid hsl(0,0%,89%);
+    display: flex
+}
+.footer-links {
+    text-align: right;
+    width: 50%;
+    margin: 1rem 1.5rem 1rem 0;
+}
+.footer-links a {
+    margin-left: 1rem;
+}
+.footer-links a, #copyright {
+    color: hsl(0,0%,30%)
+}
+#copyright {
+    margin: 1rem 0 1rem 1.5rem;
+    width: 50%;
+}
+
+/* Mobile Section */
+.mobile-only {
+    display: none;
+}
+@media only screen and (max-width: 768px) {
+    .desktop-only {
+        display: none;
+    }
+    .mobile-only {
+        display: block;
+    }
+    /* Mobile Header */
+    header {
+        height: 4rem;
+    }
+    .header-mobile {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .header-mobile img {
+        height: 3rem;
+        width: auto;
+        padding: 0 2rem;
+    }
+    /*Mobile Learn*/
+    #learn {
+        display: block;
+        padding-top: 0;
+    }
+    #learn .left {
+        width: 100%;
+        padding: 0;
+    }
+    .learn-text-container {
+        width: 100%;
+        padding: 0 2rem;
+        margin: 0;
+    }
+    .learn-text-container h2 {
+        font-size: 3rem;
+        margin: 2rem 0;
+    }
+    #start-button {
+        margin: 1rem;
+        background-color: hsl(0,0%,60%)
+    }
+    /* Mobile Practice */
+    .right {
+        width: 100%;
+        border: none;
+        margin: 0;
+        padding: 2rem 0;
+    }
+    .information {
+        display: block;
+        border: none;
+    }
+    .right-image-container {
+        width: 100%;
+        padding: 1rem;
+    }
+    .right-text-container {
+        width: 100%;
+    }
+    .right-text-container {
+        padding-left: 2rem;
+        padding-bottom: 3rem;
+    }
+    .final-information .right-text-container {
+        padding-bottom: 1rem;
+    }
+    .final-information a {
+        margin-bottom: 0;
+    }
+    /* Mobile Start */
+    #start {
+        background-color: hsl(180,1%,96%);
+        border-top: 3px solid hsl(0,0%,89%);
+        border-bottom: 3px solid hsl(0,0%,89%);
+        padding-bottom: 3rem;
+    }
+    #start h2 {
+        padding-top: 3rem;
+        padding-bottom: 1rem;
+    }
+    .course-list {
+        padding: 0 1rem;
+        align-content: baseline;
+    }
+    .course {
+        width: 100%;
+        max-width: 100%;
+        padding: 1.5rem 1rem 1.5rem 1rem;
+        background-color: hsl(0,0%,90%);
+        margin: .5rem 0
+    }
+    .course p {
+        display: none;
+    }
+    .course h4 {
+        margin: 0;
+        font-size: 1.75rem;
+    }
+    /* Mobile Thesis */
+    #thesis h2 {
+        padding-top: 3rem;
+        padding-bottom: 1.5rem;
+    }
+    .thesis-information-container {
+        padding: 0;
+    }
+    .second-left {
+        width: 100%;
+    }
+    .second-left h4, .second-left p {
+        display: none;
+    }
+    /*Mobile Footer */
+    footer {
+        border: none;
+        padding-top: 2rem;
+        justify-content: center;
+    }
+    .footer-links {
+        display: none;
+    }
 }

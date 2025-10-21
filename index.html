@@ -8,14 +8,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="Resources/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
 </head>
 <body>
     <header>
-        <div class="header-left">
+        <div class="header-left desktop-only">
          <img src="Resources/images/ic-logo.svg" alt="Colmar Academy Logo" class="logo">
          <h1><span id="colmar">COLMAR</span><span id="academy">ACADEMY</span></h1>
         </div>
-        <div class="header-right">
+        <div class="header-right desktop-only">
             <nav>
                 <ul>
                     <li><a href="#">On campus</a></li>
@@ -24,6 +26,12 @@
                     <li><a href="#" id="final">Sign in</a></li>
                 </ul>
             </nav>
+        </div>
+        <div class="mobile-only header-mobile">
+            <img src="Resources/images/ic-logo.svg" alt="Colmar Academy Logo">
+            <img src="Resources/images/ic-on-campus.svg" alt="Menu Icon">
+            <img src="Resources/images/ic-online.svg" alt="Computer icon">
+            <img src="Resources/images/ic-login.svg" alt="Login Icon">
         </div>
     </header>
     <main>
@@ -40,7 +48,7 @@
             </div>
         </div>
         <div id="practice">
-            <div class="left">
+            <div class="left desktop-only">
                 <div class="image-container">
                     <img src="Resources/images/information-main.jpg" alt="a student reading a book">
                 </div>
@@ -52,8 +60,11 @@
             </div>
             <div class="right">
                 <div id= "first-information" class="information">
-                    <div class="right-image-container first-image-container">
+                    <div class="right-image-container first-image-container desktop-only">
                         <img src="Resources/images/information-orientation.jpg" alt="a group of students exploring campus">
+                    </div>
+                    <div class="right-image-container first-image-container mobile-only">
+                        <img src="Resources/images/information-orientation-mobile.jpg" alt="a group of students exploring campus">
                     </div>
                     <div class="right-text-container">
                         <h4>Orientation date</h4>
@@ -62,8 +73,11 @@
                     </div>
                 </div>
                 <div id="second-information" class="information">
-                    <div class="right-image-container">
+                    <div class="right-image-container desktop-only">
                         <img src="Resources/images/information-campus.jpg" alt="A classroom on campus">
+                    </div>
+                    <div class="right-image-container mobile-only">
+                        <img src="Resources/images/information-campus-mobile.jpg" alt="A classroom on campus">
                     </div>
                     <div class="right-text-container">
                         <h4>Our campus</h4>
@@ -71,9 +85,12 @@
                         <a href="">Read more</a>
                     </div>
                 </div>
-                <div id="last-information" class="information">
-                    <div class="right-image-container">
+                <div id="last-information" class="information final-information">
+                    <div class="right-image-container desktop-only">
                         <img src="Resources/images/information-guest-lecture.jpg" alt="Oliver Sack">
+                    </div>
+                    <div class="right-image-container mobile-only">
+                        <img src="Resources/images/information-guest-lecture-mobile.jpg" alt="Oliver Sack">
                     </div>
                     <div class="right-text-container">
                         <h4>Our Guest lecture</h4>
@@ -87,88 +104,98 @@
             <h2>Start Learning</h2>
             <div class="course-list">
                 <div class="course">
-                    <div class="course-image-container">
+                    <div class="course-image-container desktop-only">
                         <img src="Resources/images/course-software.jpg" alt="two apple computers on a desk">
                     </div>
                     <h4>Software engineering</h4>
                     <p>COURSES</p>
-                    <p>Web Development, Mobile Development, iOT, APIs</p>
+                    <p class="desc">Web Development, Mobile Development, iOT, APIs</p>
                 </div>
                 <div class="course">
-                    <div class="course-image-container">
+                    <div class="course-image-container desktop-only">
                         <img src="Resources/images/course-computer-art.jpg" alt="a person on their phone">
                     </div>
                     <h4>Computer Art</h4>
                     <p>COURSES</p>
-                    <p> Imaging & Design, Web Design, Motion Graphics & Visual Effects, Computer Animation</p>
+                    <p class="desc">Imaging & Design, Web Design, Motion Graphics & Visual Effects, Computer Animation</p>
                 </div>
                 <div class="course">
-                    <div class="course-image-container">
+                    <div class="course-image-container desktop-only">
                         <img src="Resources/images/course-design.jpg" alt="a person holding a camera">
                     </div>
                     <h4>Design</h4>
                     <p>COURSES</p>
-                    <p>User Experience Design, User Research, Visual Design</p>
+                    <p class="desc">User Experience Design, User Research, Visual Design</p>
                 </div>
                 <div class="course">
-                    <div class="course-image-container">
+                    <div class="course-image-container desktop-only">
                         <img src="Resources/images/course-data.jpg" alt="a laptop with data charts on the screen">
                     </div>
                     <h4>Data</h4>
                     <p>COURSES</p>
-                    <p>Data Science, Big Data, SQL, Data Visualization</p>
+                    <p class="desc">Data Science, Big Data, SQL, Data Visualization</p>
                 </div>
                 <div class="course">
-                    <div class="course-image-container">
+                    <div class="course-image-container desktop-only">
                         <img src="Resources/images/course-business.jpg" alt="a chessboard focusing on the king and queen pieces">
                     </div>
                     <h4>Business</h4>
                     <p>COURSES</p>
-                    <p>Product Development, Business Development, Startup</p>
+                    <p class="desc">Product Development, Business Development, Startup</p>
                 </div>
                 <div class="course">
-                    <div class="course-image-container">
+                    <div class="course-image-container desktop-only">
                         <img src="Resources/images/course-marketing.jpg" alt="a person looking at a smart watch">
                     </div>
                     <h4>Marketing</h4>
                     <p>COURSES</p>
-                    <p>Analytics, Content Marketing, Mobile Marketing</p>
+                    <p class="desc">Analytics, Content Marketing, Mobile Marketing</p>
                 </div>
             </div>
         </div>
         <div id="thesis">
             <h2>Thesis Exhibit</h2>
-            <div class="second-left">
-                <div class="video-container">
-                    <video autoplay loop muted>
-                        <source src="Resources/videos/thesis.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-                <h4>Reimagine urban</h4>
-                <p>Join us on Saturday the 18th to see how our students are changing the skylines of tomorrow!  Jonathan Ambers and Abigail Jones will take us through a tour of their architectural masterpiece they have spent the last year designing.  Be the first to see the future of New York City!</p>
-            </div>
-            <div class="second-right">
-                <div class="thesis-courses">
-                    <div clas="thesis-information">
-                        <div class="thesis-image-container">
-                            <img src="Resources/images/thesis-fisma.jpg" alt="a person designing with a phone and papers">
-                        </div>
-                        <h4>Fisma: Design and Prototype</h4>
-                        <p>Designer showcase of new prototype product</p>
+            <div class="thesis-information-container">
+                <div class="second-left">
+                    <div class="video-container">
+                        <video autoplay loop muted>
+                            <source src="Resources/videos/thesis.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
                     </div>
-                    <div clas="thesis-information">
-                        <div class="thesis-image-container">
-                            <img src="Resources/images/thesis-now-and-then.jpg" alt="the skyline of new york city">
-                        </div>
-                        <h4>Now and then:</h4>
-                        <p>Research study about New York</p>
+                    <h4>Reimagine urban</h4>
+                    <p>"Join us on Saturday the 18th to see how our students are changing the skylines of tomorrow!  Jonathan Ambers and Abigail Jones will take us through a tour of their architectural masterpiece they have spent the last year designing.  Be the first to see the future of New York City!"</p>
                 </div>
+                <div class="second-right desktop-only">
+                    <div class="thesis-courses">
+                        <div class="thesis-information first-thesis">
+                            <div class="thesis-image-container">
+                                <img src="Resources/images/thesis-fisma.jpg" alt="a person designing with a phone and papers">
+                            </div>
+                            <div class="thesis-text-container">
+                                <h4>Fisma: Design and Prototype</h4>
+                                <p>Designer showcase of new prototype product</p>
+                            </div>
+                        </div>
+                        <div class="thesis-information">
+                            <div class="thesis-image-container">
+                                <img src="Resources/images/thesis-now-and-then.jpg" alt="the skyline of new york city">
+                            </div>
+                            <div class="thesis-text-container">
+                                <h4>Now and then</h4>
+                                <p>Research study about New York</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
         <footer>
-            <p id="copyright">&copy; 2016 Colamr Academy. All rights Reserved</p>
-            <a href="#">Privacy</a>
-            <a href="#">Terms</a>
+            <p id="copyright">&copy; 2016 Colmar Academy. All rights Reserved</p>
+            <div class="footer-links">
+                <a href="#">Terms</a>
+                <a href="#">Privacy</a>
+            </div>
         </footer>
     </main>
 </body>
