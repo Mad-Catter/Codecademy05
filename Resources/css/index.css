@@ -360,7 +360,7 @@ footer {
 .mobile-only {
     display: none;
 }
-@media only screen and (max-width: 1024px) and (min-width: 769px) {
+@media only screen and (max-width: 1180px) and (min-width: 769px) {
     /* .header-left .logo {
         margin-left: 0;
     } */
